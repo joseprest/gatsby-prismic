@@ -1,0 +1,114 @@
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 0;
+  color: $text;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 88px;
+  letter-spacing: -0.01em;
+  @include mq("lg", max) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  @include mq("lg", max) {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+p {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  opacity: 0.6;
+  color: $text;
+  @include mq("md", max) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.caption {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  @include mq("md", max) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.red {
+  color: $primary;
+}
+.white {
+  color: white;
+}
+
+.underline {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    width: 100%;
+    height: 8px;
+    border-radius: 30px;
+    background-color: $primary;
+    @include mq("md", max) {
+      height: 4px;
+      width: calc(100vw - 32px);
+      bottom: -12px;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  padding-left: 76px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-image: url("../images/quote.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 48px;
+  }
+  @include mq(md, max) {
+    padding-left: 45px;
+    &::before {
+      width: 30px;
+      height: 24px;
+      background-image: url("../images/quote_mob.svg");
+    }
+  }
+}
+
+.hero-text {
+  opacity: 1;
+  color: white;
+  margin-top: 64px;
+  @include mq(sm, max) {
+    margin-top: 32px;
+  }
+}
